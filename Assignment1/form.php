@@ -1,58 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment1</title>
 </head>
+
 <body>
-    <header>
-        <h1>Registration Form</h1>
-    </header>
+    <h1>Registration Form</h1>
+    <p>Use tab keys to move from one input field to the next.</p>
 
-
-    <p> Use tab keys to move from one input field to next </p>
-    <form method="POST" action="form.php">
-       <label for="userid"></label>User ID:</label>
+    <form method="POST" action="validation.php">
+        <label for="userid">User ID: <span style="color: red;"> * </span></label>
         <input type="text" id="userid" name="userid" required><br><br>
 
-        <label for="password">Password:</label>
-        <input type="text" id="password" name="password" required><br><br>
+        <label for="password">Password: <span style="color: red;"> * </span></label>
+        <input type="password" id="password" name="password" required><br><br>
 
-        <label for="fname">First Name:</label>
+        <label for="fname">First Name:<span style="color: red;"> * </span></label>
         <input type="text" id="fname" name="fname" required><br><br>
 
         <label for="address">Address:</label>
-        <input type="address" id="address" name="address" required><br><br>
+        <input type="text" id="address" name="address"><br><br>
 
+        <label for="country">Country: <span style="color: red;"> * </span></label>
+        <select id="country" name="country">
+            <option value="Nepal">Nepal</option>
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+        </select><br><br>
 
-        <label for="country">Country:</label>
-        <input type="text" id="country" name="country" required><br><br>
+        <label for="zip">ZIP Code: <span style="color: red;"> * </span></label>
+        <input type="text" id="zip" name="zip"><br><br>
 
-        <Zip for="zip">Zip Code:</label>
-        <input type="text" id="zip" name="zip" required><br><br>
+        <label for="email">Email: <span style="color: red;"> * </span></label>
+        <input type="email" id="email" name="email"><br><br>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
+        <label>Sex: <span style="color: red;"> * </span></label>
+        <input type="radio" name="gender" value="Male" id="male"><label for="male">Male</label>
+        <input type="radio" name="gender" value="Female" id="female"><label for="female">Female</label><br><br>
 
-        <label for="Gender">Sex:</label>
-        <label for="Gender">Male</label>
-        <input type="radio" name="Gender">
-        <label for="Gender">Female</label>
-        <input type="radio" name="Gender">
-        <br><br>
+        <label>Language: <span style="color: red;"> * </span></label>
+        <input type="checkbox" name="language[]" value="English">English
+        <input type="checkbox" name="language[]" value="Non English">Non English<br><br>
 
-
-        <label for="language">Language</label>
-        <input type="checkbox" name="language" value="English">English
-        <input type="checkbox" name="language" value="French">Non English
-        <br><br>
-
-
-        <About: for="About:">About:</label>
-        <textarea id="About:" name="About:" rows="4" cols="50" required></textarea><br><br>
+        <label for="about">About:</label><br>
+        <textarea name="about" id="about" rows="4" cols="40"></textarea><br><br>
 
         <button type="submit">Submit</button>
-    
+    </form>
 </body>
+
 </html>
