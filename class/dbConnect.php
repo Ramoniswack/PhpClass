@@ -8,6 +8,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = $_POST['name'];
     $email = $_POST['email'];
 
+    //$new_email = ramon @ramon.com;
+
     $sql = "INSERT INTO simpleform (name, email) VALUES ('$name', '$email')";
 
     if (mysqli_query($conn, $sql)) {
@@ -15,6 +17,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
+//update
+// $sql="update users 
+// set password='$new_email' ,user='$user' where id='$id' 1' ";
+
+
+
+
+
+
+
+
+
+
+    $conn->close();
 }
 
 ?>
