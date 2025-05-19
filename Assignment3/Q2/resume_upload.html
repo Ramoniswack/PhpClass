@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resume and Photo Upload</title>
+</head>
+<body>
+  <h2>Submit Your Resume and Photograph</h2>
+
+  <form action="upload.php" method="POST" enctype="multipart/form-data">
+    <fieldset style="width: 300px;">
+      <legend>Upload Details</legend>
+
+      <label for="resume">Resume (PDF/DOC, max 500KB):</label><br>
+      <input type="file" id="resume" name="resume" accept=".pdf,.doc" required><br><br>
+
+      <label for="photo">Photograph (JPG/JPEG, max 1MB):</label><br>
+      <input type="file" id="photo" name="photo" accept=".jpg,.jpeg" required><br><br>
+
+      <input type="submit" value="Submit">
+    </fieldset>
+  </form>
+</body>
+</html>
